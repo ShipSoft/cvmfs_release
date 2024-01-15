@@ -1,0 +1,3 @@
+[submodule "shipdist"]
+	path = shipdist
+	url = https://github.com/ShipSoft/shipdist

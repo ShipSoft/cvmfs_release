@@ -12,6 +12,8 @@ Until May 2023 (inclusive) no changelog was kept. We might try to reconstruct it
 
 ### Added
 
+* Add shipdist submodule to pin commit used for release
+
 ### Fixed
 
 ### Changed
