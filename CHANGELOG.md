@@ -2,13 +2,32 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to Calendar Versioning (year.month.day).
+The format is based on [Keep a
+Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to
+Calendar Versioning (year.month), with the possibility of patch releases
+(year.month.patch).
 
-Until May 2023 (inclusive) no changelog was kept. We might try to reconstruct it in future.
+Until May 2023 (inclusive) no changelog was kept. We might try to reconstruct
+it in future.
 
 ## Unreleased
 
 [shipdist commit](https://github.com/ShipSoft/shipdist/tree/master)
+
+### Added
+
+### Fixed
+
+### Changed
+
+### Removed
+
+## [24.01](/cvmfs/ship.cern.ch/24.01/)
+
+[shipdist commit](https://github.com/ShipSoft/shipdist/commit/fa1270666ccf78bc2dbc6e5a8426deaf86d93eb2)
+
+First release for slc9 (lxplus9). For other architectures, please continue
+using the previous releases for ow.
 
 ### Added
 
