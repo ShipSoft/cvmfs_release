@@ -1,42 +1,51 @@
+# shellcheck shell=bash
 
-version="2023-0"
-
-if [ x"$SHIP_CVMFS_SETUP" != x"" ] 
+if [[ -z "${BASH_VERSION}" ]]
 then
-        if [ x"$SHIP_CVMFS_SETUP" == x"$version" ]
+	echo "Error: This script only supports bash (for now)"
+	return
+fi
+
+if [[ "${BASH_SOURCE[0]}" -ef "$0" ]]
+then
+    echo "Error: This script needs to be sourced, not executed!"
+    exit 1
+fi
+
+CVMFS_DIRECTORY_PATH=$(dirname "${BASH_SOURCE[0]}")
+
+pushd "${CVMFS_DIRECTORY_PATH}" > /dev/null || return
+version=$(git describe)
+popd > /dev/null || return
+
+if [[ -v SHIP_CVMFS_SETUP ]] || [[ -v SNDLHC_CVMFS_SETUP ]]
+then
+        if [[ "${SHIP_CVMFS_SETUP}" == "${version}" ]]
         then
-                echo "WARNING!"
-                echo "WARNING! Trying to setting up again the same environment."
+                echo "Warning: SHiP CVMFS setup already set up. Nothing to do."
+		return
         else
-                echo "ERROR!"
-                echo "ERROR! Trying to set up a new environment on top of an old one."
-                echo "ERROR! This is not allowed, hance we will NOT set up the environment"
-                echo "ERROR! The solution is to exit the current shell and open a new one"
+                echo "Error: Conflicting SHiP CVMFS setup already set up."
+                echo "Error: Please open a clean shell to use this environment."
+                echo "Error: Not doing anything to avoid breaking things."
                 return
         fi
 fi
-SHIP_CVMFS_SETUP=$version
 
+SHIP_CVMFS_SETUP=${version}
+echo "Setting up SHiP setup version ${version} from ${CVMFS_DIRECTORY_PATH}."
 
-# the source script set the PYTHONPATH to something internal.
-# let's store the current python path to avoid breaking anything.
-CURRENT_PYTHON_PATH=$(python -c "from __future__ import print_function; import sys; print(':'.join(sys.path)[1:]);")
-PYTHONPATH="$PYTHONPATH:$CURRENT_PYTHON_PATH"
+# the source script sets the PYTHONPATH to something internal.
+# store the current python path to avoid breaking anything.
+CURRENT_PYTHON_PATH=$(python3 -c "import sys; print(':'.join(sys.path)[1:]);")
+PYTHONPATH="${PYTHONPATH}:${CURRENT_PYTHON_PATH}"
 
-# let's source the environment with all the variables
-CVMFS_DIRECTORY_PATH=/cvmfs/ship.cern.ch/SHiP-2023/May
-SHIPDIST="$CVMFS_DIRECTORY_PATH/shipdist/"
-ALIBUILD="$CVMFS_DIRECTORY_PATH/alibuild/"
-pushd $ALIBUILD/alibuild_helpers
-ARCHITECTURE=$(python -c "from utilities import detectArch; print(detectArch())")
-popd
-WORK_DIR="$CVMFS_DIRECTORY_PATH/sw/" source $CVMFS_DIRECTORY_PATH/sw/$ARCHITECTURE/FairShip/latest/etc/profile.d/init.sh
-export FAIRROOTPATH="$CVMFS_DIRECTORY_PATH/sw/$ARCHITECTURE/FairRoot/latest"
+# source the environment with all the variables
+# shellcheck disable=SC2034
+SHIPDIST="${CVMFS_DIRECTORY_PATH}/shipdist/"
+ALIBUILD="${CVMFS_DIRECTORY_PATH}/alibuild/"
+ARCHITECTURE=$("${ALIBUILD}"/aliBuild architecture)
+# shellcheck disable=SC1090
+WORK_DIR="${CVMFS_DIRECTORY_PATH}/sw/" source "${CVMFS_DIRECTORY_PATH}/sw/${ARCHITECTURE}/FairShip/latest/etc/profile.d/init.sh"
 
-PATH="$PATH:$ALIBUILD"
-
-# fix the graphics driver issue
-if [[ ${ARCHITECTURE} == slc7_x86-64 ]]
-then
-	export LIBGL_DRIVERS_PATH="/cvmfs/sft.cern.ch/lcg/contrib/mesa/18.0.5/x86_64-centos7/lib64/dri"
-fi
+PATH="${PATH}:${ALIBUILD}"

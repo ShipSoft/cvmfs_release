@@ -13,10 +13,14 @@ Until May 2023 (inclusive) no changelog was kept. We might try to reconstruct it
 ### Added
 
 * Add shipdist submodule to pin commit used for release
+* Detect SND setup, if present
 
 ### Fixed
 
 ### Changed
+
+* Update setUp.sh
+* Make sure the script is sourced, using bash
 
 ### Removed
 
