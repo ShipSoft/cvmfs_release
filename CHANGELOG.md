@@ -27,7 +27,7 @@ it in future.
 [shipdist commit](https://github.com/ShipSoft/shipdist/commit/fa1270666ccf78bc2dbc6e5a8426deaf86d93eb2)
 
 First release for slc9 (lxplus9). For other architectures, please continue
-using the previous releases for ow.
+using the previous releases for now.
 
 ### Added
 
