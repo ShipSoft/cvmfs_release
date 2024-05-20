@@ -1,3 +1,6 @@
 [submodule "shipdist"]
 	path = shipdist
 	url = https://github.com/ShipSoft/shipdist
+[submodule "alibuild"]
+	path = alibuild
+	url = https://github.com/alisw/alibuild

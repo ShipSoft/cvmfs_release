@@ -16,6 +16,8 @@ it in future.
 
 ### Added
 
+* Add alibuild as submodule
+
 ### Fixed
 
 ### Changed
