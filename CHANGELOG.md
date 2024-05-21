@@ -16,6 +16,18 @@ it in future.
 
 ### Added
 
+### Fixed
+
+### Changed
+
+### Removed
+
+## [24.05](/cvmfs/ship.cern.ch/24.05/)
+
+[shipdist commit](https://github.com/ShipSoft/shipdist/tree/24.05)
+
+### Added
+
 * Add alibuild as submodule
 
 ### Fixed
