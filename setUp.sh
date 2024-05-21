@@ -15,7 +15,7 @@ fi
 CVMFS_DIRECTORY_PATH=$(dirname "${BASH_SOURCE[0]}")
 
 pushd "${CVMFS_DIRECTORY_PATH}" > /dev/null || return
-version=$(git describe)
+version=$(git describe --tags)
 popd > /dev/null || return
 
 if [[ -v SHIP_CVMFS_SETUP ]] || [[ -v SNDLHC_CVMFS_SETUP ]]

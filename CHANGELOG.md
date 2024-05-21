@@ -20,6 +20,8 @@ it in future.
 
 ### Fixed
 
+* Use `git describe --tags` for version
+
 ### Changed
 
 ### Removed
