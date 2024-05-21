@@ -24,6 +24,8 @@ it in future.
 
 ### Changed
 
+* Prepend alibuild to path, add symlink for unqualified python
+
 ### Removed
 
 ## [24.01](/cvmfs/ship.cern.ch/24.01/)

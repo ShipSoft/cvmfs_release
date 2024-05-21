@@ -44,8 +44,7 @@ PYTHONPATH="${PYTHONPATH}:${CURRENT_PYTHON_PATH}"
 # shellcheck disable=SC2034
 SHIPDIST="${CVMFS_DIRECTORY_PATH}/shipdist/"
 ALIBUILD="${CVMFS_DIRECTORY_PATH}/alibuild/"
+PATH="${PATH}:${ALIBUILD}"
 ARCHITECTURE=$("${ALIBUILD}"/aliBuild architecture)
 # shellcheck disable=SC1090
 WORK_DIR="${CVMFS_DIRECTORY_PATH}/sw/" source "${CVMFS_DIRECTORY_PATH}/sw/${ARCHITECTURE}/FairShip/latest/etc/profile.d/init.sh"
-
-PATH="${PATH}:${ALIBUILD}"
