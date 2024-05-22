@@ -9,7 +9,7 @@ Issues should be reported against the relevant component if possible.
 
 | Release | `slc7_x86-64` | `slc9_x86-64` | `ubuntu2204_x86-64` |
 |---|---|---|---|
-| 24.05 | &cross; | &check; | &cross; |
+| 24.05.1 | &cross; | &check; | &cross; |
 | 24.01 | &cross; | &check; | &cross; |
 | SHiP-2023/May | &cross; | &cross; | &check; |
 | SHiP-2022/May | &check; | &cross; | &cross; |

@@ -7,6 +7,8 @@ Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to
 Calendar Versioning (year.month), with the possibility of patch releases
 (year.month.patch).
 
+Releases with unspecified patch-level will redirect to latest patch on CVMFS.
+
 Until May 2023 (inclusive) no changelog was kept. We might try to reconstruct
 it in future.
 
@@ -20,6 +22,17 @@ it in future.
 
 ### Changed
 
+### Removed
+
+## [24.05.1](/cvmfs/ship.cern.ch/24.05.1/)
+
+This release supersedes 24.05.1, as an update to ZeroMQ, needed for SWAN was
+forgotten and a new alibuild release made an ugly workaround unnecessary.
+
+[shipdist commit](https://github.com/ShipSoft/shipdist/tree/24.05.1)
+
+### Changed
+
 * Update alibuild to v1.17.2
 
 ### Removed
@@ -27,6 +40,8 @@ it in future.
 * Removed python symlink, which became unnecessary with alibuild update
 
 ## [24.05](/cvmfs/ship.cern.ch/24.05/)
+
+Update XRootD to fix issues accessing files on EOS.
 
 [shipdist commit](https://github.com/ShipSoft/shipdist/tree/24.05)
 
@@ -42,8 +57,6 @@ it in future.
 
 * Prepend alibuild to path, add symlink for unqualified python
 
-### Removed
-
 ## [24.01](/cvmfs/ship.cern.ch/24.01/)
 
 [shipdist commit](https://github.com/ShipSoft/shipdist/commit/fa1270666ccf78bc2dbc6e5a8426deaf86d93eb2)
@@ -55,8 +68,6 @@ using the previous releases for now.
 
 * Add shipdist submodule to pin commit used for release
 * Detect SND setup, if present
-
-### Fixed
 
 ### Changed
 
