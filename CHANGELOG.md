@@ -20,7 +20,11 @@ it in future.
 
 ### Changed
 
+* Update alibuild to v1.17.2
+
 ### Removed
+
+* Removed python symlink, which became unnecessary with alibuild update
 
 ## [24.05](/cvmfs/ship.cern.ch/24.05/)
 
