@@ -24,6 +24,21 @@ it in future.
 
 ### Removed
 
+## [24.06](/cvmfs/ship.cern.ch/24.06/)
+
+This release implements a workaround for the git safe.directory issues and
+introduces support for Ubuntu 22.04.
+
+[shipdist commit](https://github.com/ShipSoft/shipdist/tree/24.06)
+
+### Added
+
+* Support Ubuntu 22.04
+
+### Fixed
+
+* Workaround for git safe.directory issue
+
 ## [24.05.1](/cvmfs/ship.cern.ch/24.05.1/)
 
 This release supersedes 24.05.1, as an update to ZeroMQ, needed for SWAN was
