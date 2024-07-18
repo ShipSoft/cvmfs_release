@@ -22,6 +22,8 @@ it in future.
 
 ### Changed
 
+* Update alibuild to v1.17.3
+
 ### Removed
 
 ## [24.06](/cvmfs/ship.cern.ch/24.06/)
