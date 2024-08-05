@@ -22,9 +22,19 @@ it in future.
 
 ### Changed
 
-* Update alibuild to v1.17.3
-
 ### Removed
+
+## [24.07](/cvmfs/ship.cern.ch/24.07/)
+
+[shipdist commit](https://github.com/ShipSoft/shipdist/tree/24.07)
+
+### Fixed
+
+* Fix EOS authentication issue by upgrading XRootD version
+
+### Changed
+
+* Update alibuild to v1.17.3
 
 ## [24.06](/cvmfs/ship.cern.ch/24.06/)
 
