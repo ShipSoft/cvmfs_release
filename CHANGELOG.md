@@ -24,6 +24,13 @@ it in future.
 
 ### Removed
 
+## [24.09](/cvmfs/ship.cern.ch/24.09/)
+
+Rebuild for new shipdist version, fixing EOS issues for good and updating
+several packages.
+
+[shipdist commit](https://github.com/ShipSoft/shipdist/tree/24.09)
+
 ## [24.07](/cvmfs/ship.cern.ch/24.07/)
 
 [shipdist commit](https://github.com/ShipSoft/shipdist/tree/24.07)

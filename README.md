@@ -9,6 +9,7 @@ Issues should be reported against the relevant component if possible.
 
 | Release | `slc9_x86-64` | `ubuntu2204_x86-64` |
 |---|---|---|
+| 24.09 | &check; | &check; |
 | 24.07 | &check; | &check; |
 | 24.06 | &check; | &check; |
 | 24.05.1 | &check; | &cross; |
