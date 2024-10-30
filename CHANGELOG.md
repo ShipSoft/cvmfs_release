@@ -14,7 +14,7 @@ it in future.
 
 ## Unreleased
 
-[shipdist commit](https://github.com/ShipSoft/shipdist/tree/master)
+[shipdist commit](https://github.com/ShipSoft/shipdist/tree/main)
 
 ### Added
 
@@ -23,6 +23,12 @@ it in future.
 ### Changed
 
 ### Removed
+
+## [24.10](/cvmfs/ship.cern.ch/24.10/)
+
+Version updates of several packages and move to standalone GenFit.
+
+[shipdist commit](https://github.com/ShipSoft/shipdist/tree/24.10)
 
 ## [24.09](/cvmfs/ship.cern.ch/24.09/)
 
