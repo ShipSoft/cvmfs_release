@@ -22,9 +22,19 @@ it in future.
 
 ### Changed
 
-* Update alibuild to v1.17.13
-
 ### Removed
+
+## [25.01](/cvmfs/ship.cern.ch/25.01/)
+
+[shipdist commit](https://github.com/ShipSoft/shipdist/tree/76c581472e82745d1858f611b582901ff9c182f8)
+
+### Fixed
+
+* Move to patched FairRoot to allow use without GEANT3
+
+### Changed
+
+* Update alibuild to v1.17.13
 
 ## [24.10](/cvmfs/ship.cern.ch/24.10/)
 
