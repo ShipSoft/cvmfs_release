@@ -11,6 +11,7 @@ Issues should be reported against the relevant component if possible.
 
 | Release | `slc9_x86-64` | `ubuntu2204_x86-64` |
 |---|---|---|
+| 25.08 | &check; | &check; |
 | 25.01 | &check; | &cross; |
 | 24.10 | &check; | &check; |
 | 24.09 | &check; | &check; |

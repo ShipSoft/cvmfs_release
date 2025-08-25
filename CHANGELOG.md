@@ -24,6 +24,19 @@ it in future.
 
 ### Removed
 
+## [25.08](/cvmfs/ship.cern.ch/25.08/)
+
+[shipdist commit](https://github.com/ShipSoft/shipdist/commit/c4d9795dc68d1a1f46bc5e92bd39eaac383a15ce)
+
+### Fixed
+
+* Revert to upstream FairRoot to avoid several issues
+* Fix GenFit prefer system check
+
+### Changed
+
+* Update alibuild to v1.17.26
+
 ## [25.01](/cvmfs/ship.cern.ch/25.01/)
 
 [shipdist commit](https://github.com/ShipSoft/shipdist/tree/76c581472e82745d1858f611b582901ff9c182f8)

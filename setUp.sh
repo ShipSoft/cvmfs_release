@@ -41,8 +41,9 @@ CURRENT_PYTHON_PATH=$(python3 -c "import sys; print(':'.join(sys.path)[1:]);")
 PYTHONPATH="${PYTHONPATH}:${CURRENT_PYTHON_PATH}"
 
 # source the environment with all the variables
+ALIBUILD_CONFIG_DIR="${CVMFS_DIRECTORY_PATH}/shipdist/"
 # shellcheck disable=SC2034
-SHIPDIST="${CVMFS_DIRECTORY_PATH}/shipdist/"
+SHIPDIST="${ALIBUILD_CONFIG_DIR}"
 ALIBUILD="${CVMFS_DIRECTORY_PATH}/alibuild/"
 PATH="${PATH}:${ALIBUILD}"
 ARCHITECTURE=$("${ALIBUILD}"/aliBuild architecture)
