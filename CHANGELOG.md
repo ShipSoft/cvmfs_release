@@ -22,6 +22,18 @@ it in future.
 
 ### Changed
 
+### Removed
+
+## [25.09](/cvmfs/ship.cern.ch/25.09/)
+
+[shipdist commit](https://github.com/ShipSoft/shipdist/commit/cf8eb57ce18f473f3c1b7401ff3ed620d3bbbf24)
+
+### Added
+
+### Fixed
+
+### Changed
+
 * Update alibuild to v1.17.26, fixing an issue with aliDoctor
 
 ### Removed
